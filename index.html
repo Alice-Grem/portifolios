@@ -2618,6 +2618,66 @@
     #capa .cover-orb-four,
     #capa .cover-orb-five{animation:none !important;}
   }
+  /* ---------- MOBILE: Apresentação com foto de fundo em tela cheia ---------- */
+@media (max-width:760px){
+  .intro{
+    position:relative !important;
+    min-height:100svh !important;
+    height:auto !important;
+    padding:0 !important;
+    background-image:url('./igor-apresentacao.png') !important;
+    background-repeat:no-repeat !important;
+    background-position:center 18% !important;
+    background-size:cover !important;
+    display:flex !important;
+    align-items:flex-end !important;
+  }
+  .intro:before{ display:none !important; content:none !important; }
+  .intro:after{
+    content:'' !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:0 !important;
+    background:linear-gradient(180deg,
+      rgba(17,16,13,.15) 0%,
+      rgba(17,16,13,.55) 45%,
+      rgba(17,16,13,.96) 82%,
+      var(--bg) 100%) !important;
+    pointer-events:none !important;
+  }
+  .intro .wrap{
+    display:block !important;
+    position:relative !important;
+    z-index:1 !important;
+    width:calc(100% - 44px) !important;
+    min-height:0 !important;
+    margin:0 auto !important;
+    padding:0 0 48px !important;
+  }
+  .intro-photo{ display:none !important; }
+  .intro-copy{
+    max-width:100% !important;
+    text-align:left !important;
+    margin:0 !important;
+  }
+  .intro-copy:before{ display:none !important; content:none !important; }
+  .intro .eyebrow{ margin-bottom:14px !important; font-size:12px !important; }
+  .intro-title{
+    font-size:clamp(44px,13vw,66px) !important;
+    margin-bottom:18px !important;
+    line-height:.86 !important;
+  }
+  .intro-lede{
+    max-width:100% !important;
+    font-size:15px !important;
+    line-height:1.55 !important;
+    margin-bottom:22px !important;
+  }
+  .intro-actions{
+    justify-content:flex-start !important;
+    gap:10px !important;
+  }
+}
 
 </style>
 <body>
@@ -2982,3 +3042,16 @@
   }
 </script>
 
+</body>
+</html>
+('active'); });
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    sections.forEach(function(s){ obs.observe(s); });
+  }
+</script>
+
+</body>
+</html>
